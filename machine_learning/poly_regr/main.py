@@ -6,8 +6,10 @@ from sklearn.preprocessing import PolynomialFeatures
 from sklearn import linear_model
 from sklearn.metrics import r2_score
 
+from .. import constants
+
 SHOW_PLOTS = False
-df = pd.read_csv("FuelConsumption.csv")
+df = pd.read_csv(constants.get_data_path("FuelConsumption.csv"))
 
 ### GET ONLY THE FEATURES WE WANT ###
 target_features = ["ENGINESIZE", "CYLINDERS", "FUELCONSUMPTION_COMB", "CO2EMISSIONS"]

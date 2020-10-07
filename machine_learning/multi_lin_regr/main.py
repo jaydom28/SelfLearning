@@ -2,10 +2,12 @@ import matplotlib.pyplot as plt
 import pandas as pd
 import pylab as pl
 import numpy as np
+from .. import constants
 
 from sklearn import linear_model
 
-df = pd.read_csv("FuelConsumption.csv")
+data_file = constants.data_path + "FuelConsumption.csv"
+df = pd.read_csv(data_file)
 print("Loading data...")
 print(df.head())
 print("\n\n")

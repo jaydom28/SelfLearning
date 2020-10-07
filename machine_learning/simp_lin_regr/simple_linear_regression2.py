@@ -4,8 +4,10 @@ import pandas as pd
 from sklearn import datasets, linear_model
 from sklearn.metrics import mean_squared_error, r2_score
 
+from .. import constants
+
 print("Reading the data...")
-data = pd.read_csv("data/ex1data1.txt", header=None, names=["Population", "Profit"])
+data = pd.read_csv(constants.get_data_path("ex1data1.txt"), header=None, names=["Population", "Profit"])
 
 X, y = np.array(data["Population"]).reshape(-1, 1), np.array(data["Profit"]).reshape(-1, 1)
 
